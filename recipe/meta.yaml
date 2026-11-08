@@ -1,5 +1,5 @@
 {% set name = "dashing" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   # There is a non-Python dashing package on bioconda.
@@ -7,13 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dashing-{{ version }}.tar.gz
-  sha256: 2514608e0f29a775dbd1b1111561219ce83d53cfa4baa2fe4101fab84fd56f1b
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/dashing-{{ version }}.tar.gz
+  sha256: aeb56020ea2ae170a09498ff23f9c30cc76c02b83de3467e1262112578abbd9b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
